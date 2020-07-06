@@ -16,7 +16,7 @@ after_success:
   - docker build -t halderripan/complex-fibonacci-server ./server
   - docker build -t halderripan/complex-fibonacci-worker ./worker
   # Docker Login
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD"
   # Take these images and push them to docker hub
   - docker push halderripan/complex-fibonacci-client
   - docker push halderripan/complex-fibonacci-nginx
