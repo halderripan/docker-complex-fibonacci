@@ -2,7 +2,7 @@
 
 ## A multi-container Docker deployment
 
-A multicontainer fibonacci application - React, Redis, PostgresRedis
+A multicontainer fibonacci application - React, Redis, Postgres, Nginx
 
 ## Development Process Diagram
 ![Development Process Diagram](/assets/Dev_Process_Diagram.png "Dev Process Diagram.png")
