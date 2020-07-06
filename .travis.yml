@@ -22,3 +22,15 @@ after_success:
   - docker push halderripan/complex-fibonacci-nginx
   - docker push halderripan/complex-fibonacci-server
   - docker push halderripan/complex-fibonacci-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: complex-fibonacci
+  env: ComplexFibonacci-env
+  bucket_name: elasticbeanstalk-us-east-1-390963358109
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
